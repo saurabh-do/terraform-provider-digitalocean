@@ -7,10 +7,10 @@ import (
 	"github.com/digitalocean/terraform-provider-digitalocean/digitalocean/app"
 	"github.com/digitalocean/terraform-provider-digitalocean/digitalocean/byoipprefix"
 	"github.com/digitalocean/terraform-provider-digitalocean/digitalocean/cdn"
-	"github.com/digitalocean/terraform-provider-digitalocean/digitalocean/dedicatedinference"
 	"github.com/digitalocean/terraform-provider-digitalocean/digitalocean/certificate"
 	"github.com/digitalocean/terraform-provider-digitalocean/digitalocean/config"
 	"github.com/digitalocean/terraform-provider-digitalocean/digitalocean/database"
+	"github.com/digitalocean/terraform-provider-digitalocean/digitalocean/dedicatedinference"
 	"github.com/digitalocean/terraform-provider-digitalocean/digitalocean/domain"
 	"github.com/digitalocean/terraform-provider-digitalocean/digitalocean/droplet"
 	"github.com/digitalocean/terraform-provider-digitalocean/digitalocean/dropletautoscale"
@@ -177,6 +177,7 @@ func Provider() *schema.Provider {
 			"digitalocean_dedicated_inference_accelerators":        dedicatedinference.DataSourceDigitalOceanDedicatedInferenceAccelerators(),
 			"digitalocean_dedicated_inference_tokens":              dedicatedinference.DataSourceDigitalOceanDedicatedInferenceTokens(),
 			"digitalocean_dedicated_inference_sizes":               dedicatedinference.DataSourceDigitalOceanDedicatedInferenceSizes(),
+			"digitalocean_dedicated_inference_gpu_model_config":    dedicatedinference.DataSourceDigitalOceanDedicatedInferenceGPUModelConfig(),
 		},
 
 		ResourcesMap: map[string]*schema.Resource{
